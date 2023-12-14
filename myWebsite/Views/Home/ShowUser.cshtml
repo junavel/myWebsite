@@ -77,13 +77,29 @@
         .button-container {
             display: flex; /* Use flexbox for layout */
         }
+        .create-new-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none; /* Remove default underline for anchor tags */
+            margin-top: 20px; /* Add some space between the button and the table */
+        }
+
+            .create-new-button:hover {
+                background-color: purple;
+            }
+
 
 
     </style>
     <title>Show User</title>
 </head>
 <body>
-    <h2>Show User</h2>
+    <h2>List Of Users</h2>
     <table border="1">
         <thead>
             <tr>
@@ -119,5 +135,10 @@
             }
         </tbody>
     </table>
+    <form method="get" action="CreateNewPage">
+        <!-- Replace 'CreateNewPage' with your actual URL -->
+        <a href="@Url.Action("login")" class="create-new-button">Create New</a>
+    </form>
+
 </body>
 </html>

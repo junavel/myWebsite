@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\myWebsite",
+    "\\myWebsite\\Controllers",
     "\\myWebsite\\Views",
     "\\myWebsite\\Views\\Home"
   ],
