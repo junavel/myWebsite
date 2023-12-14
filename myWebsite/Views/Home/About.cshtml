@@ -1,0 +1,162 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <style>
+        /* Your CSS styles here */
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        h1 {
+            text-align: center;
+        }
+
+        /* About section styles */
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .about-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Team section styles */
+        .team {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .team-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+            .card img {
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+
+        .card-info {
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+
+        /* Additional information styles */
+        p {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <section class="about">
+        <h1>About Us</h1>
+        <p style="font-weight: bold">PlanMaster is a leading platform...</p>
+        <div class="about-info">
+        </div>
+        <div>
+            <p>
+                Our platform is thoughtfully designed to empower you in organizing, prioritizing, and efficiently managing your tasks and activities. With intuitive interfaces and a range of customizable options, Plan Master allows you to tailor your experience according to your unique needs.
+
+                We offer a comprehensive suite of planning tools, scheduling assistance, and task management solutions. From setting goals, creating to-do lists, and setting reminders to tracking progress and achieving milestones, Plan Master is your go-to destination for streamlining your daily life and maximizing your potential.
+
+                Join us today and discover how Plan Master can elevate your planning experience, enabling you to stay on top of your commitments and make the most of every moment.
+            </p>
+            <button>Read More...</button>
+        </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <h1>Meet Our Team</h1>
+        <div class="team-cards">
+            <!-- Cards here -->
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/business-office-business-woman-professional.jpg" alt="User 1">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Juna</h2>
+                    <p class="card-role">CEO and Founder</p>
+                    <p class="card-email">juna@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230822183347/man-portrait-businessman-male.jpg" alt="User 2">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Joe</h2>
+                    <p class="card-role">Co-Founder</p>
+                    <p class="card-email">joe@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230824122630/business-office-business-woman-professional.jpg" alt="User 3">
+                </div>
+                <div class="card-info">
+                    <h2 class="card-name">Jana</h2>
+                    <p class="card-role">Co-Founder</p>
+                    <p class="card-email">Jana@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <p>For more information, just contact us.</p>
+</body>
+</html>
