@@ -49,33 +49,33 @@
         tr:hover {
             background-color: #f5f5f5;
         }
-        /* Common style for action buttons */
+       
         .action-button {
-            color: white; /* White text color */
-            border: none; /* No border */
-            padding: 10px 20px; /* Padding around the text */
-            text-align: center; /* Center the text */
-            text-decoration: none; /* No underlining */
-            display: inline-block; /* Display as inline-block */
-            font-size: 16px; /* Font size */
-            cursor: pointer; /* Cursor style */
-            border-radius: 4px; /* Rounded corners */
-            margin-right: 15px; /* Add some margin between buttons */
+            color: white; 
+            border: none; 
+            padding: 10px 10px; 
+            text-align: center;
+            text-decoration: none; 
+            display: inline-block; 
+            font-size: 16px; 
+            cursor: pointer; 
+            border-radius: 4px; 
+            margin-right: 4px; 
         }
 
-        /* Style for delete button */
-        .edit-button {
-            background-color: #8a2be2; /* Purple-blue background color */
-        }
-
-        /* Style for edit button */
+       
         .delete-button {
-            background-color: #89CFF0 /* Green background color */
+            background-color: red; 
         }
 
-        /* Container to hold buttons */
+        
+        .edit-button {
+            background-color: #89CFF0;
+        }
+
+    
         .button-container {
-            display: flex; /* Use flexbox for layout */
+            display: flex; 
         }
         .create-new-button {
             display: inline-block;
@@ -85,8 +85,8 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            text-decoration: none; /* Remove default underline for anchor tags */
-            margin-top: 20px; /* Add some space between the button and the table */
+            text-decoration: none; 
+            margin-top: 20px;
         }
 
             .create-new-button:hover {
@@ -103,6 +103,7 @@
     <table border="1">
         <thead>
             <tr>
+                <th>UserId</th>
                 <th>Firstname</th>
                 <th>Lastname</th>
                 <th>Email</th>
@@ -113,30 +114,30 @@
         <tbody>
             @foreach (var item in userList)
             {
-                <tr>
-                    <td>@item.firstname</td>
-                    <td>@item.lastname</td>
-                    <td>@item.email</td>
-                    <td>@item.password</td>
-                    <td>
-                        <div class="button-container">
-                            <form method="post" action="UserUpdate">
-                                <input type="hidden" name="id" value="@item.userId" />
-                                <button type="submit" class="action-button edit-button">Edit</button>
-                            </form>
-                            <form method="post" action="UserDelete">
-                                <input type="hidden" name="id" value="@item.userId" />
-                                <button type="submit" class="action-button delete-button">Delete</button>
-                            </form>
-                        </div>
+            <tr>
+                <td>@item.userId</td>
+                <td>@item.firstname</td>
+                <td>@item.lastname</td>
+                <td>@item.email</td>
+                <td>@item.password</td>
+                <td>
+                    <div class="button-container">
+                        <form method="post" action="UserUpdate">
+                            <input type="hidden" name="id" value="@item.userId" />
+                            <button type="submit" class="action-button edit-button">Edit</button>
+                        </form>
+                        <form method="post" action="UserDelete">
+                            <input type="hidden" name="id" value="@item.userId" />
+                            <button type="submit" class="action-button delete-button">Delete</button>
+                        </form>
+                    </div>
 
-                    </td>
-                </tr>
+                </td>
+            </tr>
             }
         </tbody>
     </table>
     <form method="get" action="CreateNewPage">
-        <!-- Replace 'CreateNewPage' with your actual URL -->
         <a href="@Url.Action("login")" class="create-new-button">Create New</a>
     </form>
 

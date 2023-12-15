@@ -212,6 +212,7 @@
     <Content Include="Views\Home\LogIn.cshtml" />
     <Content Include="Views\Home\ShowUser.cshtml" />
     <Content Include="Views\Home\UserUpdate.cshtml" />
+    <Content Include="Views\Home\AddActivity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

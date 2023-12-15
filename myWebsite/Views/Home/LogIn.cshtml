@@ -1,16 +1,26 @@
 ﻿@{
-    ViewBag.Title = "login";
+    ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var userList = (IEnumerable<registered_user>)ViewData["registered_user"];
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>Login</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .register-form {
+            margin-top: 50px;
+            padding: 20px;   
+            margin: 50px auto;
+        }
+       
+
         .note {
             text-align: center;
             height: 100px;
@@ -21,35 +31,47 @@
         }
 
         .form-content {
-            padding: 5%;
+            padding: 2%;
             border: 1px solid #ced4da;
             margin-bottom: 2%;
         }
 
+        .form-group {
+            margin-bottom: 15px;
+        }
+
         .form-control {
             border-radius: 1.5rem;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            width: 100%;
         }
 
         .btnSubmit {
             border: none;
             border-radius: 1.5rem;
             padding: 1%;
-            width: 20%;
+            width: 30%;
             cursor: pointer;
             background: #0062cc;
             color: #fff;
+            font-size: 16px;
+        }
+
+            .btnSubmit:hover {
+                background: #00549f;
+            }
+
+        label {
+            font-weight: bold;
         }
     </style>
 </head>
-
 <body>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
     <div class="container register-form">
         <div class="form">
             <div class="note">
-                <p>Register Now</p>
+                <p>Register</p>
             </div>
             <div class="form-content">
                 <form action="AddUserToDatabase" method="POST">
@@ -70,7 +92,6 @@
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     <button type="submit" class="btnSubmit">Submit</button>
-
                 </form>
             </div>
         </div>
